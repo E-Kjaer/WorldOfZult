@@ -7,6 +7,8 @@ import java.util.Map;
 class Registry {
   Context context;
   Command fallback;
+
+  // Map, which contains string-keyword and their associated command
   Map<String, Command> commands = new HashMap<String, Command>();
   
   Registry (Context context, Command fallback) {
@@ -17,13 +19,14 @@ class Registry {
   public void register (String name, Command command) {
     commands.put(name, command);
   }
-  
+
+  // Handles and runs commands
   public void dispatch (String line) {
-    String[] elements = line.split(" ");
-    String command = elements[0];
-    String[] parameters = getParameters(elements);
-    Command handler = getCommand(command);
-    (handler==null ? fallback : handler).execute(context, command, parameters);
+    String[] elements = line.split(" "); //Splits string into string-array. go door -> {go, door}
+    String command = elements[0]; // Command first
+    String[] parameters = getParameters(elements); // Get parameters
+    Command handler = getCommand(command); // Retrieves command
+    (handler==null ? fallback : handler).execute(context, command, parameters); // Runs command if there is no error
   }
   
   public Command getCommand (String commandName) {
