@@ -4,12 +4,14 @@
 import java.util.Scanner;
 
 class Game {
+  //Creates world with rooms
   static World    world    = new World();
   static Context  context  = new Context(world.getEntry());
   static Command  fallback = new CommandUnknown();
   static Registry registry = new Registry(context, fallback);
   static Scanner  scanner  = new Scanner(System.in);
-  
+
+  // Adds new commands with their name and attached command-instance
   private static void initRegistry () {
     Command cmdExit = new CommandExit();
     registry.register("exit", cmdExit);
@@ -25,7 +27,7 @@ class Game {
     initRegistry();
     context.getCurrent().welcome();
     
-    while (context.isDone()==false) {
+    while (context.isDone()==false) { // Runs game if not done
       System.out.print("> ");
       String line = scanner.nextLine();
       registry.dispatch(line);

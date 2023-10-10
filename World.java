@@ -3,14 +3,17 @@
 
 class World {
   Space entry;
-  
+
+  // Constructor
   World () {
+    // Adds rooms
     Space entry    = new Space("Entry");
     Space corridor = new Space("Corridor");
     Space cave     = new Space("Cave");
     Space pit      = new Space("Darkest Pit");
     Space outside  = new Space("Outside");
-    
+
+    // Adds edges, which is the paths between rooms
     entry.addEdge("door", corridor);
     corridor.addEdge("door", cave);
     cave.addEdge("north", pit);

@@ -7,7 +7,8 @@ class Space extends Node {
   Space (String name) {
     super(name);
   }
-  
+
+  // Welcome command, which runs automatically when entering a room
   public void welcome () {
     System.out.println("You are now at "+name);
     Set<String> exits = edges.keySet();
