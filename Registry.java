@@ -10,35 +10,39 @@ class Registry {
 
   // Map, which contains string-keyword and their associated command
   Map<String, Command> commands = new HashMap<String, Command>();
-  
+
+  // Constructor
   Registry (Context context, Command fallback) {
-    this.context = context;
-    this.fallback = fallback;
+    this.context = context; // Gets given context to get session information
+    this.fallback = fallback; // Fallback for incorrect command
   }
-  
+
+  // Add Command to register (Map)
   public void register (String name, Command command) {
     commands.put(name, command);
   }
 
-  // Handles and runs commands
+  // Handles and runs commands from player input
   public void dispatch (String line) {
     String[] elements = line.split(" "); //Splits string into string-array. go door -> {go, door}
-    String command = elements[0]; // Command first
+    String command = elements[0]; // Get command from string-array
     String[] parameters = getParameters(elements); // Get parameters
     Command handler = getCommand(command); // Retrieves command
     (handler==null ? fallback : handler).execute(context, command, parameters); // Runs command if there is no error
   }
-  
+
+  // Get command
   public Command getCommand (String commandName) {
     return commands.get(commandName);
   }
-  
+
+  // Get all commands
   public String[] getCommandNames () {
     return commands.keySet().toArray(new String[0]);
   }
   
   // helpers
-  
+
   private String[] getParameters (String[] input) {
     String[] output = new String[input.length-1];
     for (int i=0 ; i<output.length ; i++) {

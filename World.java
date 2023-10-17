@@ -23,7 +23,8 @@ class World {
     
     this.entry = entry;
   }
-  
+
+  // Get spawnpoint / entry to the world
   Space getEntry () {
     return entry;
   }
