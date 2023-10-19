@@ -5,7 +5,7 @@ their speech and if they are hungry. It handles the different interactions with 
 import java.util.ArrayList;
 
 public class Group {
-    ArrayList<Item> items = new Arraylist<Item>; // Their allowed items
+    ArrayList<Item> items = new Arraylist<Item>(); // Their allowed items
 
     private String speech = ""; // Their speech
 
