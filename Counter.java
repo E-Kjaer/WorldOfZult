@@ -1,6 +1,6 @@
 class Counter {
-    int count=0;
-    public void incrCount(){
+    static int count=0;
+    public static void incrCount(){
         count++;
     }
 }

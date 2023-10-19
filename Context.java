@@ -28,6 +28,7 @@ class Context {
       current.goodbye(); // Runs goodbye
       current = next; // Changes to the next room / node
       current.welcome(); // Runs the welcome-method
+      Counter.incrCount();
     }
   }
 

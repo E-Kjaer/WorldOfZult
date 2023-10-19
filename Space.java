@@ -1,11 +1,25 @@
 /* Space class for modeling spaces (rooms, caves, ...)
  */
 
+import java.util.ArrayList;
 import java.util.Set;
 
 class Space extends Node {
+  ArrayList<Items> items = new ArrayList<Items>();
+
+  //Only name constructor
   Space (String name) {
     super(name);
+    //set group to null
+  }
+
+  //Name + Group constructor
+  Space (String name, Group group){
+
+  }
+
+  public void printItems (){
+
   }
 
   // Welcome command, which runs automatically when entering a room
