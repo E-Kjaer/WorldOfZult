@@ -1,7 +1,9 @@
+
 import java.util.ArrayList;
 
 class Inventory {
-    Arraylist<Item> inventory = new Arraylist<Item>();
+    ArrayList<Item> inventory = new ArrayList<Item>();
+
     int count= inventory.size();
     public void addItem(Item item){
         inventory.add(item);
@@ -13,6 +15,7 @@ class Inventory {
         for (int i =0; i<inventory.size(); i++){
             //mangler metode vil vi bruge for each loop?
         }
+        return "";
     }
 
 }

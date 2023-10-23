@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Set;
 
 class Space extends Node {
-  ArrayList<Items> items = new ArrayList<Items>();
+  ArrayList<Item> items = new ArrayList<Item>();
 
   //Only name constructor
   Space (String name) {
@@ -15,7 +15,7 @@ class Space extends Node {
 
   //Name + Group constructor
   Space (String name, Group group){
-
+    this(name);
   }
 
   public void printItems (){

@@ -1,7 +1,7 @@
 /* Baseclass for commands
  */
 
-class BaseCommand {
+abstract class BaseCommand {
   // Description of the command.
   String description = "Undocumented";
 
