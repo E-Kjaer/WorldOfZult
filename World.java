@@ -4,8 +4,8 @@
 import java.util.ArrayList;
 
 class World {
-    Space entry;
-    ArrayList<Group> groups;
+    private Space entry;
+    private ArrayList<Group> groups;
 
     // Constructor
     World () {

@@ -5,11 +5,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 class Registry {
-  Context context;
-  Command fallback;
+  private Context context;
+  private Command fallback;
 
   // Map, which contains string-keyword and their associated command
-  Map<String, Command> commands = new HashMap<String, Command>();
+  private Map<String, Command> commands = new HashMap<String, Command>();
 
   // Constructor
   Registry (Context context, Command fallback) {

@@ -6,10 +6,10 @@ import java.util.Map;
 
 class Node {
   // Name of room
-  String name;
+  private String name;
 
   // Adjacent rooms with their name (String) and Node-instance
-  Map<String, Node> edges = new HashMap<String, Node>();
+  private Map<String, Node> edges = new HashMap<String, Node>();
 
   // Constructor, which sets the name
   Node (String name) {
@@ -29,6 +29,10 @@ class Node {
   // Go to new room by following edge. Retrives next node in Map
   public Node followEdge (String direction) {
     return edges.get(direction);
+  }
+
+  public Map<String, Node> getEdges() {
+    return edges;
   }
 }
 

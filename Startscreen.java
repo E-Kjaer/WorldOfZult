@@ -4,9 +4,9 @@ and it lets the user change the game settings. */
 import java.util.Scanner;
 
 public class Startscreen {
-    String name; // Name of the player
+    private String name; // Name of the player
 
-    int difficulty; // Difficulty. 1 - 3, maybe?
+    private int difficulty; // Difficulty. 1 - 3, maybe?
 
     public void displayStartscreen (Scanner scanner) {
         // Display Startscreen and get user-input on their name and difficulty

@@ -3,7 +3,7 @@ their speech and if they are hungry. It handles the different interactions with 
  */
 
 public class Group {
-    Item correctItem; // Their allowed items
+    private Item correctItem; // Their allowed items
     private String speech = ""; // Their speech
     private boolean hungry = true; // Their hunger-state. Default is hungry, so true
 

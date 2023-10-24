@@ -5,19 +5,19 @@ import java.util.Scanner;
 
 class Game {
   // Creates world with rooms
-  static World    world    = new World();
+  private static World    world    = new World();
 
   // Creates context with the start room
-  static Context  context  = new Context(world.getEntry());
+  private static Context  context  = new Context(world.getEntry());
 
   // Fallback for misinput from player
-  static Command  fallback = new CommandUnknown();
+  private static Command  fallback = new CommandUnknown();
 
   // Creates registry for commands
-  static Registry registry = new Registry(context, fallback);
+  private static Registry registry = new Registry(context, fallback);
 
   // Scanner for getting player input
-  static Scanner  scanner  = new Scanner(System.in);
+  private static Scanner  scanner  = new Scanner(System.in);
 
   // Adds new commands with their name and attached command-instance in the Registry
   private static void initRegistry () {

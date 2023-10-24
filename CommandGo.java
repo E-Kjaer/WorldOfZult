@@ -1,7 +1,7 @@
 /* Command for transitioning between spaces
  */
 
-class CommandGo extends BaseCommand implements Command {
+public class CommandGo extends BaseCommand implements Command {
   //Description of command
   CommandGo () {
     description = "Follow an exit";

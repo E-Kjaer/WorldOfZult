@@ -4,7 +4,7 @@ import java.util.ArrayList;
 class Inventory {
     private ArrayList<Item> items = new ArrayList<Item>();
 
-    int count = items.size();
+    private int count = items.size();
 
     public Item getItem(String name) {
         for (Item item : items) {

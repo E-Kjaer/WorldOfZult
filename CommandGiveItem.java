@@ -16,7 +16,7 @@ public class CommandGiveItem extends BaseCommand implements Command{
         Space space = context.getCurrent();
 
         //Check if space has a group
-        if (space.group != null) {
+        if (space.getGroup() != null) {
             //Try to give specified item to group
             if (space.getGroup().checkItem(parameters[0])) {
                 context.getPlayer().getInventory().removeItem(context.getPlayer().getInventory().getItem(parameters[0]));

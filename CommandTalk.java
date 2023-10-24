@@ -9,9 +9,9 @@ public class CommandTalk extends BaseCommand implements Command {
         Space space = context.getCurrent();
 
         //If space has group, print out the groups message
-        if (space.group != null) {
+        if (space.getGroup() != null) {
             //Prints out the groups message
-            System.out.println(space.group.getSpeech());
+            System.out.println(space.getGroup().getSpeech());
         } else {
             //Prints out an error, as there is no group in the space
             System.out.println("Error: There is no group in the current space");

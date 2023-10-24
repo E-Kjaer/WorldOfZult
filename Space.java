@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.Set;
 
 class Space extends Node {
-  Inventory inventory;
-  Group group;
-  String description;
+  private Inventory inventory;
+  private Group group;
+  private String description;
 
   //Only name constructor
   Space (String name, String description) {
@@ -29,7 +29,7 @@ class Space extends Node {
 
   // Welcome command, which runs automatically when entering a room
   public void welcome () {
-    System.out.println("You are now at "+name);
+    System.out.println("You are now at "+ this.getName());
 
     if (description != "") {
       System.out.println(description);
@@ -39,7 +39,7 @@ class Space extends Node {
       System.out.println("There is a group of locals in this space.\nIf you wish to talk to them, you can use the 'talk' command");
     }
 
-    Set<String> exits = edges.keySet();
+    Set<String> exits = this.getEdges().keySet();
     System.out.println("Current exits are:");
     for (String exit: exits) {
       System.out.println(" - "+exit);

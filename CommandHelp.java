@@ -3,7 +3,7 @@
 
 import java.util.Arrays;
 
-class CommandHelp extends BaseCommand implements Command {
+public class CommandHelp extends BaseCommand implements Command {
   Registry registry;
   
   CommandHelp (Registry registry) {

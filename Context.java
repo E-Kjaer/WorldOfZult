@@ -4,11 +4,11 @@
 class Context {
 
   //Holds current position and therefore current node.
-  Space current;
-  Player player;
+  private Space current;
+  private Player player;
 
   //Holds boolean for if the game is done
-  boolean done = false;
+  private boolean done = false;
 
   // Constructor gets given startnode
   Context (Space node) {
