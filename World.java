@@ -3,12 +3,12 @@
 
 import java.util.ArrayList;
 
-class World {
+public class World {
     private Space entry;
     private ArrayList<Group> groups;
 
     // Constructor
-    World () {
+    public World () {
         // Adds items
         Item fishingRod = new Item("Fishing_Rod");
         Item scythe = new Item("Scythe");
@@ -50,12 +50,12 @@ class World {
     }
 
     // Get spawnpoint / entry to the world
-    Space getEntry () {
+    public Space getEntry () {
         return entry;
     }
 
     // Get list of groups
-    ArrayList<Group> getGroups() {
+    public ArrayList<Group> getGroups() {
         return groups;
     }
 }

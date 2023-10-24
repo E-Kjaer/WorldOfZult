@@ -4,7 +4,7 @@
 import java.util.Arrays;
 
 public class CommandHelp extends BaseCommand implements Command {
-  Registry registry;
+  private Registry registry;
   
   CommandHelp (Registry registry) {
     this.registry = registry;

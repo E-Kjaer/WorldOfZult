@@ -4,7 +4,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-class Node {
+public class Node {
   // Name of room
   private String name;
 
@@ -12,7 +12,7 @@ class Node {
   private Map<String, Node> edges = new HashMap<String, Node>();
 
   // Constructor, which sets the name
-  Node (String name) {
+  public Node (String name) {
     this.name = name;
   }
 

@@ -1,17 +1,18 @@
 /* Context class to hold all context relevant to a session.
  */
 
-class Context {
-
+public class Context {
   //Holds current position and therefore current node.
   private Space current;
+
+  // Holds player
   private Player player;
 
   //Holds boolean for if the game is done
   private boolean done = false;
 
   // Constructor gets given startnode
-  Context (Space node) {
+  public Context (Space node) {
     current = node;
   }
 

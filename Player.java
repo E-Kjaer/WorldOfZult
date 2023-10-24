@@ -2,7 +2,7 @@ public class Player {
     private String name; //Player Name
     private Inventory inventory; //Player Inventory
 
-    Player(String name){ //contructor for Player
+    public Player(String name){ //contructor for Player
         this.name = name;
         this.inventory = new Inventory();
     }

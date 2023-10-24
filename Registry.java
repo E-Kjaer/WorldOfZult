@@ -4,7 +4,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-class Registry {
+public class Registry {
   private Context context;
   private Command fallback;
 

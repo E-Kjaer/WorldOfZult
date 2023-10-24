@@ -3,7 +3,7 @@
 
 import java.util.Scanner;
 
-class Game {
+public class Game {
   // Creates world with rooms
   private static World    world    = new World();
 

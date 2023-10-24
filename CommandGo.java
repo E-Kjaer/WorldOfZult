@@ -3,7 +3,7 @@
 
 public class CommandGo extends BaseCommand implements Command {
   //Description of command
-  CommandGo () {
+  public CommandGo () {
     description = "Follow an exit";
   }
   

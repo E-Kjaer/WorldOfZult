@@ -4,13 +4,13 @@
 import java.util.ArrayList;
 import java.util.Set;
 
-class Space extends Node {
+public class Space extends Node {
   private Inventory inventory;
   private Group group;
   private String description;
 
   //Only name constructor
-  Space (String name, String description) {
+  public Space (String name, String description) {
     super(name);
     this.inventory = new Inventory();
     this.description = description;
@@ -18,7 +18,7 @@ class Space extends Node {
   }
 
   //Name + Group constructor
-  Space (String name, String description, Group group){
+  public Space (String name, String description, Group group){
     this(name, description);
     this.group = group;
   }

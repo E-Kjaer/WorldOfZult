@@ -1,7 +1,7 @@
 public class Item {
     private String name; //Item name
 
-    Item(String name){ //contructor for Item
+    public Item(String name){ //contructor for Item
         this.name = name;
     }
 

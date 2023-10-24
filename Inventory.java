@@ -1,7 +1,7 @@
 
 import java.util.ArrayList;
 
-class Inventory {
+public class Inventory {
     private ArrayList<Item> items = new ArrayList<Item>();
 
     private int count = items.size();
