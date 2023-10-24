@@ -2,17 +2,18 @@
 their speech and if they are hungry. It handles the different interactions with them.
  */
 
-import java.util.ArrayList;
-
 public class Group {
-    ArrayList<Item> items = new ArrayList<Item>(); // Their allowed items
-
+    Item correctItem; // Their allowed items
     private String speech = ""; // Their speech
-
     private boolean hungry = true; // Their hunger-state. Default is hungry, so true
 
-    public boolean checkItem(Item item) { // checks if item is allowed to be given
-        return items.contains(item);
+    public Group(Item correctItem, String speech) {
+        this.correctItem = correctItem;
+        this.speech = speech;
+    }
+
+    public boolean checkItem(String itemName) { // checks if item is allowed to be given
+        return correctItem.equals(new Item(itemName));
     }
 
     public void setHunger(boolean state) { // Set the hunger state to given parameter
@@ -26,5 +27,4 @@ public class Group {
     public String getSpeech() { // Get the group's speech
         return speech;
     }
-
 }

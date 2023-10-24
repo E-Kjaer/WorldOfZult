@@ -27,6 +27,13 @@ class Game {
     registry.register("bye", cmdExit);
     registry.register("go", new CommandGo());
     registry.register("help", new CommandHelp(registry));
+
+    //Add our own commands
+    registry.register("give", new CommandGiveItem());
+    registry.register("pickup", new CommandPickupItem());
+    registry.register("putdown", new CommandPutDownItem());
+    registry.register("talk", new CommandTalk());
+    registry.register("inventory", new CommandInventory());
   }
 
   // Main-loop
@@ -35,7 +42,12 @@ class Game {
     
     initRegistry(); // Initializes registry
     context.getCurrent().welcome(); // Runs welcome command for first room
-    
+
+    System.out.print("Enter name of player: ");
+    String name = scanner.nextLine();
+    Player player = new Player(name);
+    context.setPlayer(player);
+
     while (context.isDone()==false) { // Runs game if not done
       System.out.print("> ");
       String line = scanner.nextLine(); // Get next line from commandline input

@@ -16,12 +16,12 @@ public class CommandPutDownItem extends BaseCommand implements Command {
         Space space = context.getCurrent();
 
         //Check if any items name in inventory matches specified input from user
-        for (Item item : Inventory.getItems()) {
-            if (item.getName().equals(parameters[1])) {
+        for (Item item : context.getPlayer().getInventory().getItems()) {
+            if (item.getName().equalsIgnoreCase(parameters[0])) {
                 //Remove specified item from inventory and add item in space
-                space.items.add(item);
+                space.getInventory().addItem(item);
                 System.out.println("Put down " + item.getName());
-                Inventory.remove(item);
+                context.getPlayer().getInventory().removeItem(item);
                 return;
             }
         }

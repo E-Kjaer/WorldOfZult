@@ -5,6 +5,7 @@ class Context {
 
   //Holds current position and therefore current node.
   Space current;
+  Player player;
 
   //Holds boolean for if the game is done
   boolean done = false;
@@ -30,6 +31,14 @@ class Context {
       current.welcome(); // Runs the welcome-method
       Counter.incrCount();
     }
+  }
+
+  public Player getPlayer() {
+    return player;
+  }
+
+  public void setPlayer(Player player) {
+    this.player = player;
   }
 
   // Sets done to true, so game over

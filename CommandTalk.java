@@ -9,7 +9,7 @@ public class CommandTalk extends BaseCommand implements Command {
         Space space = context.getCurrent();
 
         //If space has group, print out the groups message
-        if (space.group != null /*space.hasGroup*/) {
+        if (space.group != null) {
             //Prints out the groups message
             System.out.println(space.group.getSpeech());
         } else {
