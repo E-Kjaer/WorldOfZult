@@ -15,13 +15,19 @@ public class CommandPickupItem extends BaseCommand implements Command {
         //Get current space from context
         Space space = context.getCurrent();
 
+        //Get the players inventory
+        Inventory playerInventory = context.getPlayer().getInventory();
+
+        //Get the spaces inventory
+        Inventory spaceInventory = space.getInventory();
+
         //Check if user input corresponds to an item in space
-        for (Item item : space.getInventory().getItems()) {
+        for (Item item : spaceInventory.getItems()) {
             //If it does, place it in inventory and remove from space
             if (item.getName().equalsIgnoreCase(parameters[0])) {
-                context.getPlayer().getInventory().addItem(item);
+                playerInventory.addItem(item);
                 System.out.println("Picked up " + item.getName());
-                space.getInventory().removeItem(item);
+                spaceInventory.removeItem(item);
                 return; //Stops command
             }
         }

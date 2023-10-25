@@ -15,12 +15,18 @@ public class CommandGiveItem extends BaseCommand implements Command{
         //Get current space from context
         Space space = context.getCurrent();
 
+        //Get the group in the current space
+        Group group = space.getGroup();
+
+        //Get the players inventory
+        Inventory playerInventory = context.getPlayer().getInventory();
+
         //Check if space has a group
-        if (space.getGroup() != null) {
+        if (group != null) {
             //Try to give specified item to group
-            if (space.getGroup().checkItem(parameters[0])) {
-                context.getPlayer().getInventory().removeItem(context.getPlayer().getInventory().getItem(parameters[0]));
-                space.getGroup().setHunger(false);
+            if (group.checkItem(parameters[0])) {
+                playerInventory.removeItem(playerInventory.getItem(parameters[0]));
+                group.setHunger(false);
                 System.out.println(parameters[0] + " was given to group");
             } else {
                 //if group refuses item, print wrong item
