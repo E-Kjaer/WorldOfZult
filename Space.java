@@ -9,22 +9,20 @@ public class Space extends Node {
   private Group group;
   private String description;
 
-  //Only name constructor
   public Space (String name, String description) {
     super(name);
-    this.inventory = new Inventory();
     this.description = description;
-    //set group to null
+    this.inventory = new Inventory();
   }
 
-  //Name + Group constructor
-  public Space (String name, String description, Group group){
-    this(name, description);
-    this.group = group;
-  }
+  public Space (Biome biome) {
+    super(biome.getBiomeName());
+    this.description = biome.getBiomeDescription();
+    this.inventory = new Inventory();
 
-  public void printItems (){
-
+    if (biome instanceof PopulatedBiome pBiome) {
+      this.group = pBiome.getGroup();
+    }
   }
 
   // Welcome command, which runs automatically when entering a room
@@ -51,11 +49,15 @@ public class Space extends Node {
   }
 
   public void addItem(Item item) {
-    this.inventory.addItem(item);
+      this.inventory.addItem(item);
   }
 
   public Group getGroup() {
     return group;
+  }
+
+  public String getDescription() {
+    return description;
   }
 
   public void goodbye () {
