@@ -2,7 +2,6 @@
  */
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class World {
     private Space entry;
@@ -49,52 +48,11 @@ public class World {
         // Add non-randomized rooms
         Space entry = new Space("Entry", "This is the entry");
 
-        // Randomizing rooms and save chosen groups into ArrayList
-        ArrayList<Biome> randomizedBiomes = new ArrayList<Biome>();
-        this.groups = new ArrayList<Group>();
+        // Create and get random rooms
+        ArrayList<Space> randomRooms = BiomeRandomizer.createRandomizedRooms(populatedBiomes, emptyBiomes, 3, 1);
 
-        Collections.shuffle(populatedBiomes); // Randomize chosen biomes
-        Collections.shuffle(emptyBiomes);
-
-        for (int i = 0; i < 3; i++) { // Add biomes with groups
-            randomizedBiomes.add(populatedBiomes.get(i));
-            this.groups.add(populatedBiomes.get(i).getGroup()); // Add group to list
-        }
-
-        for (int i = 0; i < 1; i++) { // Add biomes with no groups
-            randomizedBiomes.add(emptyBiomes.get(i));
-        }
-
-        // Create randomized rooms / spaces
-        ArrayList<Space> randomRooms = new ArrayList<Space>(); // List with all rooms
-        Collections.shuffle(randomizedBiomes); // Change room locations
-
-        for (int i = 0; i < 4; i++) {
-            randomRooms.add(new Space(randomizedBiomes.get(i)));
-        }
-
-        // Adds items to the spaces
-        ArrayList<Biome> randomItems = (ArrayList<Biome>) randomizedBiomes.clone();
-
-        /* For-loops runs all the rooms and adds items to them.
-        It does this by randomizing the items and then going through the rooms.
-        If the random items correspond to the group, it randomizes and tries again.
-        It then adds the item if it can and removes the item from the list of items. */
-        for (int i = 0; i < 4; i++) {
-            while (true) {
-                Collections.shuffle(randomItems); // Randomize layout
-                // Check not same room
-                if (!randomRooms.get(i).getDescription().equals(randomItems.get(0).getBiomeDescription())) {
-                    // Check if it can add item
-                    if (randomItems.get(0) instanceof PopulatedBiome pBiome) {
-                        randomRooms.get(i).addItem(pBiome.getItem());
-                    }
-
-                    randomItems.remove(0);
-                    break;
-                }
-            }
-        }
+        // Get groups
+        this.groups = BiomeRandomizer.getGroupsFromRooms(randomRooms);
 
         // Adds edges, which is the paths between rooms
         entry.addEdge("door", randomRooms.get(0));
