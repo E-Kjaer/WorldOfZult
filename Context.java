@@ -34,6 +34,7 @@ public class Context {
     }
   }
 
+  //Getter for Player
   public Player getPlayer() {
     return player;
   }
