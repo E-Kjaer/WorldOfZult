@@ -1,3 +1,5 @@
+/* This command let's you view your player's inventory and the items in the room */
+
 public class CommandInventory extends BaseCommand implements Command {
     //Description of the command
     public CommandInventory() {
