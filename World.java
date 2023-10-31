@@ -1,6 +1,3 @@
-/* World class for modeling the entire in-game world
- */
-
 import java.util.ArrayList;
 
 public class World {

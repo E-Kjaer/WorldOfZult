@@ -1,7 +1,3 @@
-/* Group-class handles the different groups in the game such as their allowed items,
-their speech and if they are hungry. It handles the different interactions with them.
- */
-
 public class Group {
     private Item correctItem; // Their allowed items
     private String speech = ""; // Their speech

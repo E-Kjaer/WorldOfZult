@@ -1,17 +1,14 @@
-/* Main class for launching the game
- */
-
 import java.util.Scanner;
 
 public class Game {
   // Creates world with rooms
-  private static World    world    = new World();
+  private static World world    = new World();
 
   // Creates context with the start room
   private static Context  context  = new Context(world.getEntry());
 
   // Fallback for misinput from player
-  private static Command  fallback = new CommandUnknown();
+  private static Command fallback = new CommandUnknown();
 
   // Creates registry for commands
   private static Registry registry = new Registry(context, fallback);

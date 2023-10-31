@@ -1,6 +1,3 @@
-/* Node class for modeling graphs
- */
-
 import java.util.HashMap;
 import java.util.Map;
 

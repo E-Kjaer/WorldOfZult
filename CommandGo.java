@@ -1,6 +1,3 @@
-/* Command for transitioning between spaces
- */
-
 public class CommandGo extends BaseCommand implements Command {
   //Description of command
   public CommandGo () {

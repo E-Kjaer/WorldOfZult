@@ -1,6 +1,3 @@
-/* Command for exiting program
- */
-
 public class CommandExit extends BaseCommand implements Command {
   // Runs CommandExit, which changes the attribute Done in context to True.
   @Override

@@ -1,6 +1,3 @@
-/* Startscreen-class is used as a tutorial. It gives basic information on the game
-and it lets the user change the game settings. */
-
 import java.util.Scanner;
 
 public class Startscreen {

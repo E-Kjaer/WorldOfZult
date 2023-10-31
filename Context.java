@@ -1,6 +1,3 @@
-/* Context class to hold all context relevant to a session.
- */
-
 public class Context {
   //Holds current position and therefore current node.
   private Space current;
