@@ -1,9 +1,14 @@
 /* Context class to hold all context relevant to a session.
  */
 
+import java.util.ArrayList;
+
 public class Context {
   //Holds current position and therefore current node.
   private Space current;
+
+  //Holds all the groups in the game
+  private ArrayList<Group> groups;
 
   // Holds player
   private Player player;
@@ -12,8 +17,9 @@ public class Context {
   private boolean done = false;
 
   // Constructor gets given startnode
-  public Context (Space node) {
+  public Context (Space node, ArrayList<Group> groups) {
     current = node;
+    this.groups = groups;
   }
 
   // Gets the current Space, where the player is
@@ -32,6 +38,11 @@ public class Context {
       current.welcome(); // Runs the welcome-method
       Counter.incrCount();
     }
+  }
+
+  //Getter for groups
+  public ArrayList<Group> getGroups() {
+    return groups;
   }
 
   //Getter for Player

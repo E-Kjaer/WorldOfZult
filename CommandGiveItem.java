@@ -28,6 +28,22 @@ public class CommandGiveItem extends BaseCommand implements Command{
                 playerInventory.removeItem(playerInventory.getItem(parameters[0]));
                 group.setHunger(false);
                 System.out.println(parameters[0] + " was given to group");
+                //
+
+                boolean isDone = true;
+
+                for (Group g : context.getGroups()) {
+                    if (g.isHungry()) {
+                        isDone = false;
+                        break;
+                    }
+                }
+
+                if (isDone) {
+                    System.out.println("YAY, you won");
+                    context.makeDone();
+                }
+
             } else {
                 //if group refuses item, print wrong item
                 System.out.println("Error: " + parameters[0] + " doesn't belong with the group");

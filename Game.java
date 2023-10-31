@@ -8,7 +8,7 @@ public class Game {
   private static World    world    = new World();
 
   // Creates context with the start room
-  private static Context  context  = new Context(world.getEntry());
+  private static Context  context  = new Context(world.getEntry(), world.getGroups());
 
   // Fallback for misinput from player
   private static Command  fallback = new CommandUnknown();
