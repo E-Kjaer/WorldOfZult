@@ -38,15 +38,17 @@ public class Game {
 
   // Main-loop
   public static void main (String args[]) {
-    System.out.println("Welcome to the World of Zuul!");
-    
     initRegistry(); // Initializes registry
-    context.getCurrent().welcome(); // Runs welcome command for first room
 
-    System.out.print("Enter name of player: ");
-    String name = scanner.nextLine();
+    Startscreen startscreen = new Startscreen();
+    String name = startscreen.displayStartscreen(scanner);
+
     Player player = new Player(name);
     context.setPlayer(player);
+
+    startscreen.printWelcomeMessage(registry);
+
+    context.getCurrent().welcome(); // Runs welcome command for first room
 
     while (context.isDone()==false) { // Runs game if not done
       System.out.print("> ");

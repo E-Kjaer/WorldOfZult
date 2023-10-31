@@ -40,7 +40,7 @@ public class CommandGiveItem extends BaseCommand implements Command{
                 }
 
                 if (isDone) {
-                    System.out.println("YAY, you won");
+                    System.out.println("YAY, you won - in " + Counter.getCount() + " moves");
                     context.makeDone();
                 }
 

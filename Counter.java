@@ -4,7 +4,11 @@ public class Counter {
         count++;
     }
 
-    public void resetCount() {
+    public static void resetCount() {
         count = 0;
+    }
+
+    public static int getCount() {
+        return count;
     }
 }
