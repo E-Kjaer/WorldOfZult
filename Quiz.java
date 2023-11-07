@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Quiz {
     private ArrayList<Question> questions;
-    int score = 0;
+    private int score = 0;
 
     public Quiz() {
         this.questions = new ArrayList<Question>();
@@ -11,20 +11,20 @@ public class Quiz {
 
     public void run() {
         for (Question question : questions) {
-            System.out.println(question.question);
+            System.out.println(question.getQuestion());
 
-            for (String answer : question.answers) {
+            for (String answer : question.getAnswers()) {
                 System.out.println(answer);
             }
 
             Scanner scanner = new Scanner(System.in);
             System.out.print("Vælg svarmulighed: ");
             String ans = scanner.nextLine();
-            if (ans.equalsIgnoreCase(question.correctAnswer)) {
+            if (ans.equalsIgnoreCase(question.getCorrectAnswer())) {
                 score++;
                 System.out.println("Korrekt svar\n");
             } else {
-                System.out.println("Forkert svar, det rigtige svar er: " + question.correctAnswer + "\n");
+                System.out.println("Forkert svar, det rigtige svar er: " + question.getCorrectAnswer() + "\n");
             }
         }
         System.out.println("Quiz score: " + score + "/" + questions.size());
