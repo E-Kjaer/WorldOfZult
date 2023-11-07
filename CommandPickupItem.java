@@ -1,14 +1,14 @@
 public class CommandPickupItem extends BaseCommand implements Command {
     //Description of the command
     public CommandPickupItem() {
-        description = "Pick up an item from the current space";
+        description = "Brug til at samle et redskab op fra et rum. Udføres ved at skrive “Opsaml” + (navn på redskab) fx “Opsaml fiskestang”";
     }
 
     @Override
     public void execute (Context context, String command, String parameters[]) {
         //Ensure that only 1 item is picked up at a time
         if (guardEq(parameters, 1)) {
-            System.out.println("Only 1 item can be picked up at a time");
+            System.out.println("Kun et redskab kan samles op ad gangen");
             return; //Stops command
         }
 
@@ -26,12 +26,12 @@ public class CommandPickupItem extends BaseCommand implements Command {
             //If it does, place it in inventory and remove from space
             if (item.getName().equalsIgnoreCase(parameters[0])) {
                 playerInventory.addItem(item);
-                System.out.println("Picked up " + item.getName());
+                System.out.println("Samlede " + item.getName() + " op");
                 spaceInventory.removeItem(item);
                 return; //Stops command
             }
         }
         //Prints error, if the input doesn't match any item
-        System.out.println("Error: Item not found");
+        System.out.println("Fejl: Redskab ikke fundet");
     }
 }

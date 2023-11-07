@@ -1,14 +1,14 @@
 public class CommandGiveItem extends BaseCommand implements Command{
     //Description of the command
     public CommandGiveItem() {
-        description = "Giving an item to the group in the current space";
+        description = "Brug til at give grupper de redskaber de skal bruge. Udføres ved at skrive “Giv” + (navn på redskab) fx “Giv fiskestang”";
     }
 
     @Override
     public void execute (Context context, String command, String parameters[]) {
         //Check if exactly one item is selected
         if (guardEq(parameters, 1)){
-            System.out.println("Error exactly 1 item must be given");
+            System.out.println("Fejl kun et redskab må gives");
             return; //Stops command
         }
 
@@ -27,7 +27,7 @@ public class CommandGiveItem extends BaseCommand implements Command{
             if (group.checkItem(parameters[0])) {
                 playerInventory.removeItem(playerInventory.getItem(parameters[0]));
                 group.setHunger(false);
-                System.out.println(parameters[0] + " was given to group");
+                System.out.println(parameters[0] + " blev givet til gruppen");
                 //
 
                 boolean isDone = true;
@@ -40,17 +40,16 @@ public class CommandGiveItem extends BaseCommand implements Command{
                 }
 
                 if (isDone) {
-                    System.out.println("YAY, you won - in " + Counter.getCount() + " moves");
                     context.makeDone();
                 }
 
             } else {
                 //if group refuses item, print wrong item
-                System.out.println("Error: " + parameters[0] + " doesn't belong with the group");
+                System.out.println("Fejl: " + parameters[0] + " kan ikke bruges af gruppen");
             }
         } else {
             //if there is no group in the current space, print no group in this space
-            System.out.println("Error: Current space has no group");
+            System.out.println("Fejl: Der er ingen gruppe i rummet");
         }
     }
 }

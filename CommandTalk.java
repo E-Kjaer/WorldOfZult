@@ -1,7 +1,7 @@
 public class CommandTalk extends BaseCommand implements Command {
     //Description of the command
     public CommandTalk() {
-        description = "Talking with the group in the current space";
+        description = "Brug til at tale med de forskellige grupper i verden. Udføres ved at skrive “tal” i et rum der indeholder en gruppe";
     }
     @Override
     public void execute (Context context, String command, String parameters[]) {
@@ -17,7 +17,7 @@ public class CommandTalk extends BaseCommand implements Command {
             System.out.println(group.getSpeech());
         } else {
             //Prints out an error, as there is no group in the space
-            System.out.println("Error: There is no group in the current space");
+            System.out.println("Fejl: Der er ingen gruppe i rummet");
         }
     }
 }

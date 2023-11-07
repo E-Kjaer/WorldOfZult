@@ -29,18 +29,18 @@ public class Space extends Node {
 
   // Welcome command, which runs automatically when entering a room
   public void welcome () {
-    System.out.println("You are now at "+ this.getName());
+    System.out.println("Du er nu her:  "+ this.getName());
 
     if (description != "") {
       System.out.println(description);
     }
 
     if (group != null) {
-      System.out.println("There is a group of locals in this space.\nIf you wish to talk to them, you can use the 'talk' command");
+      System.out.println("Der er en gruppe af lokale i rummet.\nHvis du ønsker at tale med dem kan du bruge 'tal' kommandoen");
     }
 
     Set<String> exits = this.getEdges().keySet();
-    System.out.println("Current exits are:");
+    System.out.println("De mulige udgange er: ");
     for (String exit: exits) {
       System.out.println(" - "+exit);
     }

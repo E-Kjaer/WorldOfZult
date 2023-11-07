@@ -35,7 +35,7 @@ public class Startscreen {
                 "grupper for at høre hvad de har brug for.\nLyt godt med, for der kommer en " +
                 "quiz til sidst. Her er en liste med forskellige commands:\n";
         System.out.println(message);
-        registry.dispatch("help");
+        registry.dispatch("hjælp");
         System.out.println();
     }
 }
