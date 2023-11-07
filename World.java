@@ -36,15 +36,15 @@ public class World {
         //groups.add(groupLand);
 
         // Adds rooms
-        Space entry    = new Space("Entry", "This is the entry");
-        Space space1 = new Space("Empty land", "This is an empty land");
-        Space space2 = new Space("Group land", "This is a land with a group", groupSea);
-        Space space3 = new Space("Empty land", "This is an empty land");
-        Space space4 = new Space("Group land", "This is a land with a group");
-        Space space5 = new Space("Group land", "This is a land with a group");
-        Space space6 = new Space("Group land", "This is a land with a group");
-        Space space7 = new Space("Empty land", "This is an empty land");
-        Space space8 = new Space("Group land", "This is a land with a group");
+        Space entry    = new Space("Indgang", "Du befinder dig i indgangen til World of Zult");
+        Space space1 = new Space("Strand", "Her er der en flot strand med hvidt sand og turkisblåt vand. Det ligner, at der er et koralrev lidt længere ude.\n");
+        Space space2 = new Space("Monsunland", "Her ligger et lille landbrugssamfund, vejret er vådt og varmt.\n", groupSea);
+        Space space3 = new Space("Eng", "Der er en vidtstrækkende eng med højt græs og vilde blomster. En å snor sig langsomt gennem landskabet.\n");
+        Space space4 = new Space("Bondegård", "En bondegård med en gruppe landmænd og en tom mark. \n");
+        Space space5 = new Space("Jordland", "Her er et land med meget dårlig jordkvalitet.\n");
+        Space space6 = new Space("Frugtplantage", "Her er der en stor frugtplantage med flinke mennesker, men der er godt nok tørt.\n");
+        Space space7 = new Space("Bjergkæde", "Du står ved bunden af en bjergkæde. De sneklædte bjerge er kilometer høje og toppene er gemt bagved et lag skyer.\n");
+        Space space8 = new Space("Drivhus-land", "Her er en gård med flere drivhuse. Ved det ene drivhus står to personer. \n");
 
         space2.addItem(fishingRod);
 
