@@ -3,7 +3,7 @@
 public class CommandInventory extends BaseCommand implements Command {
     //Description of the command
     public CommandInventory() {
-        description = "Printing the contents of the spaces inventory and the players inventory";
+        description = "Brug til at tjekke redskaberne i din inventar samt redskaberne i rummet. Udføres ved at skrive “Inventar”";
     }
 
     @Override
@@ -15,12 +15,12 @@ public class CommandInventory extends BaseCommand implements Command {
 
         //Print items in space
         if (!spaceInventory.getItems().isEmpty()) {
-            System.out.println("These items lie in the space");
+            System.out.println("Følgende redskaber ligger i rummet");
             for (Item item : spaceInventory.getItems()) {
                 System.out.println(item.getName());
             }
         } else {
-            System.out.println("There are no items in the space");
+            System.out.println("Der er ingen redskaber i rummet");
         }
 
         //Get the players inventory
@@ -28,12 +28,12 @@ public class CommandInventory extends BaseCommand implements Command {
 
         //Print items in player
         if (!playerInventory.getItems().isEmpty()) {
-            System.out.println("These items lie in the players inventory");
+            System.out.println("Følgende redskaber ligger i inventaret");
             for (Item item : playerInventory.getItems()) {
                 System.out.println(item.getName());
             }
         } else {
-            System.out.println("There are no items in the the players inventory");
+            System.out.println("Der er ingen redskaber i inventaret");
         }
     }
 }

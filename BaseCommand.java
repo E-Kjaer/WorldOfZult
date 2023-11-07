@@ -3,7 +3,7 @@
 
 abstract class BaseCommand {
   // Description of the command.
-  String description = "Undocumented";
+  String description = "Ikke dokumenteret";
 
   // Checks the number of parameters
   protected boolean guardEq (String[] parameters, int bound) {

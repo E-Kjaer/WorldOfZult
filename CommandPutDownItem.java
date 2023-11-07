@@ -1,14 +1,14 @@
 public class CommandPutDownItem extends BaseCommand implements Command {
     //Description of the command
     public CommandPutDownItem() {
-        description = "Put down an item from the inventory in the current space";
+        description = "Brug til at lægge redskaber ned i rummet. Udføres ved at skrive “Læg” + (navn på redskab) fx “Læg fiskestang”";
     }
 
     @Override
     public void execute (Context context, String command, String parameters[]) {
         //Ensure that only 1 item is put down at a time
         if (guardEq(parameters, 1)) {
-            System.out.println("Only 1 item can be put down at a time");
+            System.out.println("Kun et redskab kan lægges ad gangen");
             return; //Stops command
         }
 
@@ -26,11 +26,11 @@ public class CommandPutDownItem extends BaseCommand implements Command {
             if (item.getName().equalsIgnoreCase(parameters[0])) {
                 //Remove specified item from inventory and add item in space
                 spaceInventory.addItem(item);
-                System.out.println("Put down " + item.getName());
+                System.out.println("Lagde " + item.getName() + " ned");
                 playerInventory.removeItem(item);
                 return;
             }
         }
-        System.out.println("Error: Item not found");
+        System.out.println("Fejl: Redskab ikke fundet");
     }
 }

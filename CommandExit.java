@@ -4,7 +4,7 @@
 public class CommandExit extends BaseCommand implements Command {
   //Description for the command
   public CommandExit() {
-    description = "";
+    description = "Afslutter spillet";
   }
 
   // Runs CommandExit, which changes the attribute Done in context to True.
