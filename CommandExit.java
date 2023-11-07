@@ -7,9 +7,9 @@ public class CommandExit extends BaseCommand implements Command {
     description = "Afslutter spillet";
   }
 
-  // Runs CommandExit, which changes the attribute Done in context to True.
+  // Runs CommandExit, which terminates the game with System.exit(0)
   @Override
   public void execute (Context context, String command, String parameters[]) {
-    context.makeDone(); // Stops game
+    System.exit(0);; // Stops game
   }
 }
