@@ -64,6 +64,6 @@ public class Game {
     quiz.initQuiz();
     quiz.run();
 
-    System.out.println("Tak for at spille! Du er nu helt færdig og med en flot score på " + Counter.getCount() + ". Sult er et stort problem i nogle dele af verden, så vi håber, at du lærte noget nyt og selvfølgelig at spillet var spændende \\^o^/");
+    System.out.println("Tak for at spille! Du er nu helt færdig og klarede det på " + Counter.getCount() + " træk. Sult er et stort problem i nogle dele af verden, så vi håber, at du lærte noget nyt og selvfølgelig at spillet var spændende \\^o^/");
   }
 }

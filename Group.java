@@ -4,12 +4,14 @@ their speech and if they are hungry. It handles the different interactions with 
 
 public class Group {
     private Item correctItem; // Their allowed items
-    private String speech = ""; // Their speech
+    private String speech1 = "";
+    private String speech2 = "";// Their speech
     private boolean hungry = true; // Their hunger-state. Default is hungry, so true
 
-    public Group(Item correctItem, String speech) {
+    public Group(Item correctItem, String speech1, String speech2) {
         this.correctItem = correctItem;
-        this.speech = speech;
+        this.speech1 = speech1;
+        this.speech2 = speech2;
     }
 
     public boolean checkItem(String itemName) { // checks if item is allowed to be given
@@ -24,7 +26,10 @@ public class Group {
         return hungry;
     }
 
-    public String getSpeech() { // Get the group's speech
-        return speech;
+    public String getSpeech1() { // Get the group's speech
+        return speech1;
+    }
+    public String getSpeech2() { // Get the group's speech
+        return speech2;
     }
 }
