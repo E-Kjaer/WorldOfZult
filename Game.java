@@ -57,6 +57,13 @@ public class Game {
       String line = scanner.nextLine(); // Get next line from commandline input
       registry.dispatch(line); // Run command from registry
     }
-    System.out.println("Game Over 😥");
+
+    System.out.println("Godt gået " + context.getPlayer().getName() + "! Du har klaret spillet, men der er en quiz inden spillet er helt slut. Den skal teste, hvor opmærksom du har været undervejs i spillet. Der kommer en række spørgsmål og de har hver tre valgmuligheder, hvor én af dem er korrekt. Du skal vælge det rigtige svar.");
+
+    Quiz quiz = new Quiz();
+    quiz.initQuiz();
+    quiz.run();
+
+    System.out.println("Tak for at spille! Du er nu helt færdig og med en flot score på " + Counter.getCount() + ". Sult er et stort problem i nogle dele af verden, så vi håber, at du lærte noget nyt og selvfølgelig at spillet var spændende \\^o^/");
   }
 }
