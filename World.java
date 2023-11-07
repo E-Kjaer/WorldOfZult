@@ -10,13 +10,22 @@ public class World {
     // Constructor
     public World () {
         // Adds items
-        Item fishingRod = new Item("Fishing_Rod");
-        Item scythe = new Item("Scythe");
-        Item tractor = new Item("Tractor");
+        Item lys = new Item("Lyspære", "Denne pære udsender specifikke bølgelængder af lys, " +
+                "ofte blåt og rødt, som er afgørende for fotosyntese og plantevækst." +
+                " Dette er også kaldet et vækstlys.");
+        Item  vandingssystem = new Item("Vandingssystem","Vandingssystemet opsættes på en farm," +
+                " hvor afgrøderne ikke får nok vand fra naturen til at kunne gro." +
+                " Dette gør ellers golde områder til frugtbar jord.");
+        Item biokul = new Item("Biokul","Biokul modvirker dårlig jordkvalitet," +
+                " som er et problem i nogle lande. Bedre jordkvalitet gør, at man kan dyrke flere varianter" +
+                " af afgrøder.");
+        Item maskine = new Item("Såmaskine", "Anvendes til såning af korn eller frø.");
+        Item opbaveringskasse = new Item("Opbevaringskasse", "Denne boks skærmer for vind og vejr," +
+                " hvilket forlænger holdbarheden af maden.");
 
 
         // Adds groups
-        Group groupSea = new Group(fishingRod, "We live by the sea, but we only use it for bathing");
+        Group groupDrivhus = new Group(lys, "Hej" + Game.getContext().getPlayer().getName() + "Her dyrker vi grøntsager, som f.eks. tomater, agurker og peberfrugter. Vores grøntsager vokser bedst, når der er meget dagslys. Desværre kan vi ikke styre vejret eller hvornår solen går ned, så vi er meget afhængige af sæsonerne. “);
         Group groupGrass = new Group(scythe, "We live by the tall grass");
         Group groupLand = new Group(tractor, "We live by this flat piece of dirt");
 
