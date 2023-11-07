@@ -31,7 +31,7 @@ public class Context {
   public void transition (String direction) {
     Space next = current.followEdge(direction); // Gets next node / room
     if (next==null) { // Checks if the next edge is present.
-      System.out.println("You are confused, and walk in a circle looking for '"+direction+"'. In the end you give up 😩");
+      System.out.println("Du er forvirret og går i ring for at finde '"+direction+"'. Til sidst giver du op 😩");
     } else {
       current.goodbye(); // Runs goodbye
       current = next; // Changes to the next room / node

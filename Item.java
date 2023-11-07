@@ -7,6 +7,11 @@ public class Item {
         this.description =description;
     }
 
+    public Item(String name) {
+        this.name = name;
+        this.description = "";
+    }
+
     public String getName(){ //getter for Name
         return name;
     }

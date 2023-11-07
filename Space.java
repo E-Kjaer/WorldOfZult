@@ -29,7 +29,7 @@ public class Space extends Node {
 
   // Welcome command, which runs automatically when entering a room
   public void welcome () {
-    System.out.println("Du er nu her:  "+ this.getName());
+    System.out.println("Du er nu her: "+ this.getName());
 
     if (description != "") {
       System.out.println(description);
