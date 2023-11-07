@@ -22,18 +22,16 @@ public class Game {
   // Adds new commands with their name and attached command-instance in the Registry
   private static void initRegistry () {
     Command cmdExit = new CommandExit();
-    registry.register("exit", cmdExit);
-    registry.register("quit", cmdExit);
-    registry.register("bye", cmdExit);
-    registry.register("go", new CommandGo());
-    registry.register("help", new CommandHelp(registry));
+    registry.register("afslut", cmdExit);
+    registry.register("gå", new CommandGo());
+    registry.register("hjælp", new CommandHelp(registry));
 
     //Add our own commands
-    registry.register("give", new CommandGiveItem());
-    registry.register("pickup", new CommandPickupItem());
-    registry.register("putdown", new CommandPutDownItem());
-    registry.register("talk", new CommandTalk());
-    registry.register("inventory", new CommandInventory());
+    registry.register("giv", new CommandGiveItem());
+    registry.register("opsaml", new CommandPickupItem());
+    registry.register("læg", new CommandPutDownItem());
+    registry.register("tal", new CommandTalk());
+    registry.register("inventar", new CommandInventory());
   }
 
   // Main-loop
