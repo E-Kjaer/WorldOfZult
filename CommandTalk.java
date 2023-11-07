@@ -14,7 +14,7 @@ public class CommandTalk extends BaseCommand implements Command {
         //If space has group, print out the groups message
         if (group != null) {
             //Prints out the groups message
-            System.out.println(group.getSpeech());
+            System.out.printf(group.getSpeech(),context.getPlayer().getName());
         } else {
             //Prints out an error, as there is no group in the space
             System.out.println("Fejl: Der er ingen gruppe i rummet");

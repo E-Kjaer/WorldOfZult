@@ -25,23 +25,23 @@ public class World {
 
 
         // Adds groups
-        Group groupDrivhus = new Group(lys, "Hej spiller, her dyrker vi grøntsager," +
+        Group groupDrivhus = new Group(lys, "Hej %s, her dyrker vi grøntsager," +
                 " som f.eks. tomater, agurker og peberfrugter. Vores grøntsager vokser bedst, " +
                 "når der er meget dagslys. Desværre kan vi ikke styre vejret eller hvornår solen går" +
-                " ned, så vi er meget afhængige af sæsonerne.");
-        Group groupVand = new Group(vandingssystem, "Hey spiller, her på vores gård dyrkes der forskellige typer frugter," +
+                " ned, så vi er meget afhængige af sæsonerne.\n");
+        Group groupVand = new Group(vandingssystem, "Hey %s! Her på vores gård dyrkes der forskellige typer frugter," +
                 " alt fra citrusfrugter til æbler. Mange af de høstede frugter er næsten uspiselige," +
                 " da de ender som små gnallinger. Der er nemlig ret tørt, der hvor vi dyrker.  " +
-                "Vi laver en regndans hver morgen, men det ser desværre ikke ud til at virke.");
-        Group groupKul = new Group(biokul, "Hej spiller, vi har rigtigt meget landbrugsjord, " +
+                "Vi laver en regndans hver morgen, men det ser desværre ikke ud til at virke.\n");
+        Group groupKul = new Group(biokul, "Hej %s, vi har rigtigt meget landbrugsjord, " +
                 "som vi rigtigt gerne vil dyrke vores afgrøder på. Vi har dog et stort problem, som forhindrer os i at dyrke noget på det. " +
                 "Jordkvaliteten er for dårlig til at vores planter kan gro i det. Vil du hjælpe os?");
-        Group groupMaskine = new Group(maskine, "Hej spiller, vi er landmænd, og gror korn. " +
+        Group groupMaskine = new Group(maskine, "Hej %s! Vi er landmænd, og gror korn.\n" +
                 "Vi har længe selv stået for at så vores korn, men det tager lang tid og processen er hård." +
-                " Kan du komme i tanke om en maskine som ville kunne hjælpe med at så korn mere effektivt?");
-        Group groupOpbevaringskasse = new Group(opbevaringskasse, "Hej spiller, vi har nogle afgrøder" +
+                " Kan du komme i tanke om en maskine som ville kunne hjælpe med at så korn mere effektivt?\n");
+        Group groupOpbevaringskasse = new Group(opbevaringskasse, "Hej %s! Vi har nogle afgrøder" +
                 " som producerer dejlig mad. Vi spiser så meget af det som vi kan komme til, men maden fordærver desværre for hurtigt til at vi kan" +
-                " spise det hele. Vi ville ønske at maden holdt lidt længere.");
+                " spise det hele. Vi ville ønske at maden holdt lidt længere.\n");
 
         // Adds groups to the list of groups
         this.groups = new ArrayList<Group>();
