@@ -34,6 +34,10 @@ public class Game {
     registry.register("inventar", new CommandInventory());
   }
 
+  public static Context getContext() {
+    return context;
+  }
+
   // Main-loop
   public static void main (String args[]) {
     initRegistry(); // Initializes registry
